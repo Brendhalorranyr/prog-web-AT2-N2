@@ -10,8 +10,31 @@ const recuperaTodosOsLivrosDoJson = async () => {
     return JSON.parse(dados).livros;
 };
 
+const escreverDadosNoJson = async (livros) => {
+    const dados = JSON.stringify({ livros }, null, 2);
+    await fs.writeFile(FILE_PATH, dados, 'utf-8');
+}
+
 
 export const recuperaTodosOsLivros = async () => {
-    return await recuperaTodosOsLivrosDoJson();
+    const livros = await recuperaTodosOsLivrosDoJson();
+
+    if(livros){
+        return { status: 200, msg: 'Livros recuperados com sucesso.' , livros };
+    }
+
+    return { status: 500, msg: 'Erro ao recuperar livros!' };
+}
+
+export const adicionaLivro = async (livro) => {
+    const livros = await recuperaTodosOsLivrosDoJson();
+    
+    if(livros){
+        livros.push(livro);
+        await escreverDadosNoJson(livros);
+        return { status: 201, msg: 'Livro adicionado com sucesso!', livroAdicionado: livro };
+    }
+
+    return { status: 500, msg: 'Erro ao adicionar livro!' };
 }
 

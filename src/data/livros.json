@@ -69,6 +69,20 @@
       "genero": "Ficção Científica",
       "imagem": "https://m.media-amazon.com/images/I/41D2p1NDFkL._SY445_SX342_.jpg",
       "quantidade": 4
+    },
+    {
+      "titulo": "teste titulo 1",
+      "autor": "teste autor 1",
+      "genero": "teste genero 1",
+      "imagem": "teste imagem 1",
+      "quantidade": 1
+    },
+    {
+      "titulo": "teste titulo 2",
+      "autor": "teste autor 2",
+      "genero": "teste genero 2",
+      "imagem": "teste imagem 2",
+      "quantidade": 2
     }
   ]
 }
