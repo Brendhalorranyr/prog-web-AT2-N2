@@ -1,5 +1,5 @@
 import express from 'express';
-import LivrosController from './controllers/livros.controller';
+import LivrosController from './controllers/livros.controller.js';
 
 
 const app = express();
