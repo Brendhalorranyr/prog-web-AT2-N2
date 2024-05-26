@@ -83,6 +83,13 @@
       "genero": "teste genero 2",
       "imagem": "teste imagem 2",
       "quantidade": 2
+    },
+    {
+      "titulo": "teste titulo 3",
+      "autor": "teste autor 3",
+      "genero": "teste genero 3",
+      "imagem": "teste imagem 3",
+      "quantidade": 3
     }
   ]
 }
