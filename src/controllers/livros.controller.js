@@ -25,6 +25,12 @@ LivrosController.post('/', async (req, res) => {
 
 LivrosController.post('/comprar', async (req, res) => {
     const { titulo } = req.body;
+
+    if(!titulo){
+        res.status(400).json({ status: 400, message: 'O campo titulo é obrigatório' });
+        return;
+    }
+
     const resultadoComprarLivro = await comprarLivro(titulo);
     res.status(resultadoComprarLivro.status).json(resultadoComprarLivro);
 });
