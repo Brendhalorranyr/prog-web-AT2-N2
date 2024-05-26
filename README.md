@@ -3,6 +3,12 @@
 Bem-vindo à API de Livros! Esta API permite que você gerencie uma coleção de livros e realize operações como listar todos os livros, adicionar novos livros e comprar livros (atualizando a quantidade de exemplares disponíveis).
 
 
+## Tecnologias
+
+**Node.js**
+
+**Express**
+
 # Instalação
 
 Para testar o projeto você deve seguir os seguintes passos:
