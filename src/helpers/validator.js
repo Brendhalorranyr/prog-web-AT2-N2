@@ -11,6 +11,14 @@ export const validaLivro = (livro) => {
         return { valido: false ,status: 400, message: 'O campo quantidade deve ser um número' };
     }
 
-    return { valido: true };
+    const livroValido = {
+        titulo: livro.titulo,
+        autor: livro.autor,
+        genero: livro.genero,
+        imagem: livro.imagem,
+        quantidade: livro.quantidade
+    };
+
+    return { valido: true, livroValidado: livroValido};
 }
 

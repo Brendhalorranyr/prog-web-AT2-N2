@@ -19,7 +19,7 @@ LivrosController.post('/', async (req, res) => {
         return;
     }
 
-    const resultadoAdicionaLivro = await adicionaLivro(livro);
+    const resultadoAdicionaLivro = await adicionaLivro(resultadoValidador.livroValidado);
     res.status(resultadoAdicionaLivro.status).json(resultadoAdicionaLivro);
 });
 
